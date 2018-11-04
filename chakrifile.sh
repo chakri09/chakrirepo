@@ -1,2 +1,7 @@
 #!/bin/bash
-df -h
+sudo apt-get update
+sudo apt-get install apache2 -y
+sudo /etc/init.d/apache2 start
+sudo netstat -ntulp
+sudo echo "welcome to jenkins" > var/www/html/index.html
+sudo /etc/init.d/apache2 restart
